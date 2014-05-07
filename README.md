@@ -1,4 +1,4 @@
-school
-======
+School projects
+===============
 
-School Projects
+This repo represents the projects I've been doing as a student

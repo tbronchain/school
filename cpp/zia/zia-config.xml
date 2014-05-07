@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+		<port>8080</port>
+		<thread-number>3</thread-number>
+		<php-bin>/usr/bin/php-cgi</php-bin>
+		<module>php-cgi.so</module>
+		<pl-bin>perl.exe</pl-bin>
+		<py-bin>python.exe</py-bin>
+		<root-dir>./www</root-dir>
+</config>

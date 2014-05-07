@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{269A6EB2-CE9C-4A54-B0D0-AAC4502F6398}</ProjectGuid>
+    <RootNamespace>zia</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Projets\zia-2013-bronch_t\Stat;C:\Projets\zia-2013-bronch_t\Filesystem;C:\Projets\zia-2013-bronch_t\Parser;C:\xerces-c\include;C:\Projets\zia-2013-bronch_t\XmlParser;C:\Projets\zia-2013-bronch_t\LibManager;C:\Projets\zia-2013-bronch_t\IPC;C:\Projets\zia-2013-bronch_t\Others;C:\Projets\zia-2013-bronch_t\Error;C:\Projets\zia-2013-bronch_t\ConditionVariable;C:\Projets\zia-2013-bronch_t\Thread;C:\Projets\zia-2013-bronch_t\Socket;C:\Projets\zia-2013-bronch_t\Mutex;C:\Projets\zia-2013-bronch_t\Core;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <SourcePath>C:\Projets\zia-2013-bronch_t\Stat;C:\Projets\zia-2013-bronch_t\Filesystem;C:\Projets\zia-2013-bronch_t\Parser;C:\Projets\zia-2013-bronch_t\XmlParser;C:\Projets\zia-2013-bronch_t\LibManager;C:\Projets\zia-2013-bronch_t\IPC;C:\Projets\zia-2013-bronch_t\ConditionVariable;C:\Projets\zia-2013-bronch_t\Thread;C:\Projets\zia-2013-bronch_t\Socket;C:\Projets\zia-2013-bronch_t\Mutex;C:\Projets\zia-2013-bronch_t\Core;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Projets\zia-2013-bronch_t\Stat;C:\Projets\zia-2013-bronch_t\Filesystem;C:\Projets\zia-2013-bronch_t\Parser;C:\xerces-c\include;C:\Projets\zia-2013-bronch_t\XmlParser;C:\Projets\zia-2013-bronch_t\LibManager;C:\Projets\zia-2013-bronch_t\IPC;C:\Projets\zia-2013-bronch_t\Others;C:\Projets\zia-2013-bronch_t\Error;C:\Projets\zia-2013-bronch_t\ConditionVariable;C:\Projets\zia-2013-bronch_t\Thread;C:\Projets\zia-2013-bronch_t\Socket;C:\Projets\zia-2013-bronch_t\Mutex;C:\Projets\zia-2013-bronch_t\Core;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <SourcePath>C:\Projets\zia-2013-bronch_t\Stat;C:\Projets\zia-2013-bronch_t\Filesystem;C:\Projets\zia-2013-bronch_t\Parser;C:\xerces-c\include;C:\Projets\zia-2013-bronch_t\XmlParser;C:\Projets\zia-2013-bronch_t\LibManager;C:\Projets\zia-2013-bronch_t\IPC;C:\Projets\zia-2013-bronch_t\ConditionVariable;C:\Projets\zia-2013-bronch_t\Thread;C:\Projets\zia-2013-bronch_t\Socket;C:\Projets\zia-2013-bronch_t\Mutex;C:\Projets\zia-2013-bronch_t\Core;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\xerces-c\lib\xerces-c_3.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>C:\xerces-c\lib\xerces-c_3.lib;ws2_32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Users\nougar_m\Documents\Visual Studio 2010\Projects\Error\Error\Error.hpp" />
+    <ClInclude Include="..\..\ConditionVariable\ConditionVariable.h" />
+    <ClInclude Include="..\..\ConditionVariable\ConditionVariableUnix.h" />
+    <ClInclude Include="..\..\ConditionVariable\ConditionVariableWindows.h" />
+    <ClInclude Include="..\..\Core\AStream.hpp" />
+    <ClInclude Include="..\..\Core\Callback.hpp" />
+    <ClInclude Include="..\..\Core\Client.h" />
+    <ClInclude Include="..\..\Core\Controller.h" />
+    <ClInclude Include="..\..\Core\DataTree.hpp" />
+    <ClInclude Include="..\..\Core\defines.hpp" />
+    <ClInclude Include="..\..\Core\DescriptorConf.h" />
+    <ClInclude Include="..\..\Core\DescriptorWatcher.h" />
+    <ClInclude Include="..\..\Core\httpExec.h" />
+    <ClInclude Include="..\..\Core\HttpMessage.h" />
+    <ClInclude Include="..\..\Core\HttpStep.hpp" />
+    <ClInclude Include="..\..\Core\IConf.hpp" />
+    <ClInclude Include="..\..\Core\IConnection.hpp" />
+    <ClInclude Include="..\..\Core\ILog.hpp" />
+    <ClInclude Include="..\..\Core\IMessage.hpp" />
+    <ClInclude Include="..\..\Core\IModule.hpp" />
+    <ClInclude Include="..\..\Core\Log.h" />
+    <ClInclude Include="..\..\Core\MemoryDefines.h" />
+    <ClInclude Include="..\..\Core\Methods.h" />
+    <ClInclude Include="..\..\Core\Module.h" />
+    <ClInclude Include="..\..\Core\ModuleManager.h" />
+    <ClInclude Include="..\..\Core\ObjectPool.hpp" />
+    <ClInclude Include="..\..\Core\Server.h" />
+    <ClInclude Include="..\..\Core\Stream.h" />
+    <ClInclude Include="..\..\Core\Url.h" />
+    <ClInclude Include="..\..\Error\Error.hpp" />
+    <ClInclude Include="..\..\Filesystem\IFileSystem.h" />
+    <ClInclude Include="..\..\Filesystem\UnixFileSystem.h" />
+    <ClInclude Include="..\..\Filesystem\WindowsFileSystem.h" />
+    <ClInclude Include="..\..\IPC\IPC.h" />
+    <ClInclude Include="..\..\IPC\IPCUnix.h" />
+    <ClInclude Include="..\..\IPC\IPCWindows.h" />
+    <ClInclude Include="..\..\LibManager\LibManager.h" />
+    <ClInclude Include="..\..\LibManager\LibManagerUnix.h" />
+    <ClInclude Include="..\..\LibManager\LibManagerWindows.h" />
+    <ClInclude Include="..\..\Mutex\Mutex.h" />
+    <ClInclude Include="..\..\Mutex\MutexUnix.h" />
+    <ClInclude Include="..\..\Mutex\MutexWindows.h" />
+    <ClInclude Include="..\..\Others\mio.h" />
+    <ClInclude Include="..\..\Others\mtime.h" />
+    <ClInclude Include="..\..\Parser\Parser.h" />
+    <ClInclude Include="..\..\Socket\Socket.h" />
+    <ClInclude Include="..\..\Socket\SocketUnix.h" />
+    <ClInclude Include="..\..\Socket\SocketWindows.h" />
+    <ClInclude Include="..\..\Stat\IStat.h" />
+    <ClInclude Include="..\..\Stat\StatUnix.h" />
+    <ClInclude Include="..\..\Stat\StatWindows.h" />
+    <ClInclude Include="..\..\Thread\Thread.hpp" />
+    <ClInclude Include="..\..\Thread\ThreadUnix.hpp" />
+    <ClInclude Include="..\..\Thread\ThreadWindows.hpp" />
+    <ClInclude Include="..\..\XmlParser\XMLparse.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\ConditionVariable\ConditionVariableWindows.cpp" />
+    <ClCompile Include="..\..\Core\AStream.cpp" />
+    <ClCompile Include="..\..\Core\Client.cpp" />
+    <ClCompile Include="..\..\Core\Controller.cpp" />
+    <ClCompile Include="..\..\Core\DataTree.cpp" />
+    <ClCompile Include="..\..\Core\DescriptorConf.cpp" />
+    <ClCompile Include="..\..\Core\DescriptorWatcher.cpp" />
+    <ClCompile Include="..\..\Core\httpExec.cpp" />
+    <ClCompile Include="..\..\Core\HttpMessage.cpp" />
+    <ClCompile Include="..\..\Core\Log.cpp" />
+    <ClCompile Include="..\..\Core\main.cpp" />
+    <ClCompile Include="..\..\Core\Methods.cpp" />
+    <ClCompile Include="..\..\Core\Module.cpp" />
+    <ClCompile Include="..\..\Core\ModuleManager.cpp" />
+    <ClCompile Include="..\..\Core\Server.cpp" />
+    <ClCompile Include="..\..\Core\Stream.cpp" />
+    <ClCompile Include="..\..\Core\Url.cpp" />
+    <ClCompile Include="..\..\Filesystem\UnixFileSystem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Filesystem\WindowsFileSystem.cpp" />
+    <ClCompile Include="..\..\IPC\IPCWindows.cpp" />
+    <ClCompile Include="..\..\LibManager\LibManagerWindows.cpp" />
+    <ClCompile Include="..\..\Mutex\MutexWindows.cpp" />
+    <ClCompile Include="..\..\Others\mtime.cpp" />
+    <ClCompile Include="..\..\Parser\Parser.cpp" />
+    <ClCompile Include="..\..\Socket\Socket.cpp" />
+    <ClCompile Include="..\..\Socket\SocketUnix.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Socket\SocketWindows.cpp" />
+    <ClCompile Include="..\..\Stat\StatUnix.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Stat\StatWindows.cpp" />
+    <ClCompile Include="..\..\XmlParser\XMLparse.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="post.html" />
+    <None Include="put.html" />
+    <None Include="zia-config.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

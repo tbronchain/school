@@ -1,0 +1,169 @@
+Nos points de hook :
+
+1- Socket
+Nom du fichier : ISocket.hpp
+Nom de l'interface : ISocket
+Fonctionnement : Faire heriter une classe de cette interface,
+				 implementer toutes les methodes
+Fonction d'acces : getSocket
+Remarque(s) : priorite sans improtance
+			  Ne pas faire plusieurs implementations sur le meme port,
+			  cela ne fonctionnera pas.
+
+			  
+2- Parse
+Nom du fichier : IParse.hpp
+Nom de l'interface : IParse
+Fonctionnement : Faire heriter une classe de cette interface,
+				 Reimplementer la methode run,
+				 methode remplissant l'objet request.
+Fonction d'acces : getParse
+Remarque(s) : Si aucun, version par defaut.
+
+
+3- RequestMod
+Nom du fichier : IRequestMod.hpp
+Nom de l'interface : IRequestMod
+Fonctionnement : Faire heriter une classe de cette interface,
+				 Reimplementer la methode run,
+				 methode permettant de faire des modifications
+				 sur l'objet resultant du parsing.
+Fonction d'acces : getRequestMod
+Remarque(s) : N/A
+
+
+4- ResponseHeader
+Nom du fichier : IResponseHeader.hpp
+Nom de l'interface : IResponseHeader
+Fonctionnement : Faire heriter une classe de cette interface,
+				 Reimplementer la methode run,
+				 methode permettant de generer un header de reponse.
+Fonction d'acces : getResponseHeader
+Remarque(s) : Si aucun, version par defaut.
+
+
+5- ResponseHeaderMod
+Nom du fichier : IResponseHeaderMod.hpp
+Nom de l'interface : IResponseHeaderMod
+Fonctionnement : Faire heriter une classe de cette interface,
+				 Reimplementer la methode run,
+				 methode permettant de modifier le header de reponse.
+Fonction d'acces : getResponseHeaderMod
+Remarque(s) : N/A
+
+
+6- AddDataBegin
+Nom du fichier : IAddDataBegin.hpp
+Nom de l'interface : IAddDataBegin
+Fonctionnement : Faire heriter une classe de cette interface,
+				 Reimplementer la methode run,
+				 methode permettant l'insertion de donnees en debut
+				 de corps de reponse.
+Fonction d'acces : getAddDataBegin
+Remarque(s) : N/A
+
+
+7- ExecutionMod
+Nom du fichier : IExecutionMod.hpp
+Nom de l'interface : IExecutionMod
+Fonctionnement : Faire heriter une classe de cette interface,
+				 Reimplementer la methode run,
+				 methode permettant l'execution de CGI
+				 (action sur le corps).
+Fonction d'acces : getExecutionMod
+Remarque(s) : methode run renvoi un fd, si aucun, renvoi le fichier demande
+
+
+8- AddDataEnd
+Nom du fichier : IAddDataEnd.hpp
+Nom de l'interface : IAddDataEnd
+Fonctionnement : Faire heriter une classe de cette interface,
+				 Reimplementer la methode run,
+				 methode permettant l'insertion de donnees en fin
+				 de corps de reponse.
+Fonction d'acces : getAddDataEnd
+Remarque(s) : N/A
+
+
+9- DataModIn
+Nom du fichier : IDataModIn.hpp
+Nom de l'interface : IDataModIn
+Fonctionnement : Faire heriter une classe de cette interface,
+				 Reimplementer la methode run,
+				 methode permettant la modification des donnees entrantes
+				 (corps de requetes).
+Fonction d'acces : getDataModIn
+Remarque(s) : N/A
+
+
+10- DataModOut
+Nom du fichier : IDataModOut.hpp
+Nom de l'interface : IDataModOut
+Fonctionnement : Faire heriter une classe de cette interface,
+				 Reimplementer la methode run,
+				 methode permettant la modification des donnees sortantes
+				 (corps de reponses).
+Fonction d'acces : getDataModOut
+Remarque(s) : N/A
+
+
+
+
+9 points de hook :
+
+/!\ tous les modules peuvent decider d'arreter ou non la chaine d'exec
+    Dans ce cas, renvoyer false (sauf generation contenu et modif de contenu)
+
+1- Socket : implementation de l'interface ISocket - getSocket
+   Chaque module peut ecouter un port au choix, pas deux modules sur le mm port
+
+2- Remplacement du parseur : une seule implementation possible - getParseMod
+   remplace le parseur de requete
+   - prend en param : 
+	 - l'objet a remplir (precedemment alloue)
+     - la string correspondant a la requete
+
+3- Hook de modification de la requete : - getRequestMod
+   - prend en param un pointeur sur la requete precedemment cree par le parseur
+   - modifie ce param
+
+4- Hook pour insertion de datas en tout debut de reponse
+   - prend en param :
+     - un pointeur sur la requete
+	 - une ref sur la string a remplir
+	 - si string != empty -> insertion
+
+5- Hook pour generation de header
+   - prend en param :
+	 - un pointeur sur la requete
+	 - une ref sur la string a remplir
+	 - si string != empty -> insertion
+	 - sinon ?
+
+6- Hook pour insertion de datas entre header et reponse
+   - prend en param :
+     - un pointeur sur la requete
+	 - une ref sur la string a remplir
+	 - si string != empty -> insertion
+
+7- Hook pour generation de contenu
+   - prend en param :
+	 - un pointeur sur la requete
+	 - une ref sur la string a remplir si string
+   - Si string non empty -> inserer
+   - Si retour == 0 -> ne pas s'en occuper
+   - Si retour > 0 -> fd a inserer
+   - Si retour < 0 -> casser l'execution
+
+8- Hook pour insertion de datas en toute fin de reponse (avant le \r\n\r\n)
+   - prend en param :
+     - un pointeur sur la requete
+	 - une ref sur la string a remplir
+	 - si string != empty -> insertion
+
+9- Hook pour modification du contenu
+   - prend en param :
+     - pointeur vers buffer a envoyer initialement (src)
+	 - pointeur vers buffer a envoyer apres modif (dest)
+	 - taille du buffer initial (src_len)
+   - renvoi la taille du buffer dest (si <= 0 -> close)

@@ -1,0 +1,79 @@
+#!/bin/sh
+
+PROJ="zia"
+
+configure()
+{
+    AR="ar"
+
+    if [ "`uname -s`" = "Linux" ]
+    then
+	CXX="/usr/bin/g++"
+	CXXFLAGS="-W -Wall -Wextra"
+	LDFLAGS="-L/usr/lib/ -lpthread -lxerces-c -ldl"
+    else
+	echo "Achitecture not supported"
+	return 2
+    fi
+
+
+    echo "AR=$AR" > $1
+    echo "CXX=$CXX" >> $1
+    echo "CXXFLAGS=$CXXFLAGS" >> $1
+    echo "LDFLAGS=$LDFLAGS" >> $1
+    echo "PROJ=$PROJ" >> $1
+}
+
+my_getopt()
+{
+    if [ $# -lt 1 ]
+    then
+	return 2
+    fi
+
+    rules=$1
+    shift
+
+    DEBUG=''
+
+    for i in $@
+    do
+	case "$1" in
+            --debug)
+		DEBUG="-g -ggdb"
+		shift;;
+	    --help)
+		return 2
+	esac
+    done
+    echo "DEBUG=$DEBUG" >> $rules
+}
+
+get_files()
+{
+    rm -rfv $1
+    echo "SRC = \\" > $1
+    for line in `find . -name '*.cpp' | grep -v Windows | grep -v windows | grep -v tmp | grep -v dll | grep -v unix-cgi`
+    do
+	echo -n $line >> $1
+	echo " \\" >> $1
+    done
+    echo >> $1
+}
+
+configure Makefile.rules $@
+if [ $? -eq 2 ]
+then
+    rm -f Makefile.rules
+    exit 3
+fi
+
+my_getopt Makefile.rules $@
+if [ $? -eq 2 ]
+then
+    echo "Usage: $0 [--debug]"
+    rm -f Makefile.rules
+    exit 2
+fi
+
+get_files Makefile.files

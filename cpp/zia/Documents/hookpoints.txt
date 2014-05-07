@@ -1,0 +1,20 @@
+HOOK POINTS :
+
+1- hypothese
+- STEP_IN : SocketWindows.cpp -> l 85			(ou ? ... tres flou ...)
+			Socket*	SocketWindows::acceptSocket()
+			
+- STEP_IN_POST : Controller.cpp -> l 106		(ou a l'entree dans le serveur ? a voir)
+				 void	Controller::addNewClient(Socket* s)
+				 
+
+
+2- reality but strange (not at all)				 
+- STEP_IN : Client.cpp
+			int	client::readData()
+
+- STEP_OUT : Client.cpp
+			 int Client::writeData()
+			
+- STEP_PARSER + STEP_EXEC + RAWER : Server.cpp
+									void Server::descriptorWatch()

@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Abstractions">
+      <UniqueIdentifier>{24885cc7-7397-4ff9-b0d9-8bb8be6fb514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Core">
+      <UniqueIdentifier>{5f8c65bc-52d3-4c91-b483-02f174a84f43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Abstractions">
+      <UniqueIdentifier>{cb3b7b96-c737-4722-a8f3-17d1f04c366c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Core">
+      <UniqueIdentifier>{14ab9dee-8841-426a-a624-4a9e4f1e4ecd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Socket\Socket.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Socket\SocketUnix.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Socket\SocketWindows.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Mutex\Mutex.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Mutex\MutexUnix.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Mutex\MutexWindows.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Thread\Thread.hpp">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Thread\ThreadUnix.hpp">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Thread\ThreadWindows.hpp">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\Client.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\Controller.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\DescriptorConf.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\DescriptorWatcher.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\MemoryDefines.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\Server.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ConditionVariable\ConditionVariable.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ConditionVariable\ConditionVariableUnix.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\ConditionVariable\ConditionVariableWindows.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Users\nougar_m\Documents\Visual Studio 2010\Projects\Error\Error\Error.hpp">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Others\mio.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Others\mtime.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IPC\IPC.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IPC\IPCUnix.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\IPC\IPCWindows.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\defines.hpp">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\Callback.hpp">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\IMessage.hpp">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LibManager\LibManager.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LibManager\LibManagerWindows.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LibManager\LibManagerUnix.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\ModuleManager.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\Stream.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\IModule.hpp">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\HttpStep.hpp">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\DataTree.hpp">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XmlParser\XMLparse.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\IConf.hpp">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\Log.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\ILog.hpp">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\Module.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\IConnection.hpp">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\AStream.hpp">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Parser\Parser.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Error\Error.hpp">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\HttpMessage.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\Methods.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\Url.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\ObjectPool.hpp">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Core\httpExec.h">
+      <Filter>Fichiers d%27en-tête\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Filesystem\IFileSystem.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Filesystem\UnixFileSystem.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Filesystem\WindowsFileSystem.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Stat\IStat.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Stat\StatUnix.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Stat\StatWindows.h">
+      <Filter>Fichiers d%27en-tête\Abstractions</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Mutex\MutexWindows.cpp">
+      <Filter>Fichiers sources\Abstractions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Socket\SocketWindows.cpp">
+      <Filter>Fichiers sources\Abstractions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\Client.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\Controller.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\DescriptorConf.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\DescriptorWatcher.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\main.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\Server.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ConditionVariable\ConditionVariableWindows.cpp">
+      <Filter>Fichiers sources\Abstractions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Others\mtime.cpp">
+      <Filter>Fichiers sources\Abstractions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\IPC\IPCWindows.cpp">
+      <Filter>Fichiers sources\Abstractions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Socket\Socket.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LibManager\LibManagerWindows.cpp">
+      <Filter>Fichiers sources\Abstractions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\ModuleManager.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\Stream.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\DataTree.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\XmlParser\XMLparse.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\Log.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\Module.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Parser\Parser.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\HttpMessage.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\Methods.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\AStream.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\Url.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Socket\SocketUnix.cpp">
+      <Filter>Fichiers sources\Abstractions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Core\httpExec.cpp">
+      <Filter>Fichiers sources\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Filesystem\UnixFileSystem.cpp">
+      <Filter>Fichiers sources\Abstractions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Filesystem\WindowsFileSystem.cpp">
+      <Filter>Fichiers sources\Abstractions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Stat\StatUnix.cpp">
+      <Filter>Fichiers sources\Abstractions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Stat\StatWindows.cpp">
+      <Filter>Fichiers sources\Abstractions</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="post.html">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="put.html">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+    <None Include="zia-config.xml">
+      <Filter>Fichiers de ressources</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+#ifndef MEMORYDEFINES_H_
+# define MEMORYDEFINES_H_
+
+# define BASE_ALLOC 512
+
+#endif // MEMORYDEFINES_H_

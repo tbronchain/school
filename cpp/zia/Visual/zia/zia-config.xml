@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<config>
+	<port>8088</port>
+	<thread-number>1</thread-number>
+	<php-bin>php.exe</php-bin>
+	<pl-bin>perl.exe</pl-bin>
+	<py-bin>python.exe</py-bin>
+	<root-dir>./www</root-dir>
+  <index>index.html</index>
+</config>

@@ -1,0 +1,73 @@
+## MODULES CONFIGURATION (EXAMPLE TYPE)
+
+## Hook points list
+## Socket hookpoint
+<Socket>
+	<module>
+		<name>SSLSocket</name>
+		## don't care about priority here
+		<priority>0</priority>
+		<file>sslSocket.dll</file>
+	</module>
+	<module>
+	...
+	</module>
+</Socket>
+
+## The one particularity of this hookpoint is the he must be implemented just one time
+<Parse>
+	<module>
+		## name of your module, must be each time the same
+		## mandatory
+		<name>MONMODULE1</name>
+		## priority of the module, between modules of the same hook point
+		## mandatory
+		<priority>xx</priority>
+		## module filename (with extension)
+		## mandatory
+		<file>XX.dll/XX.so</file>
+		## module folder path
+		## leave empty for default
+		<folder>PATHMODULE1</folder>
+	</module>
+</Parse>
+
+## All hookpoints folowing next use the same scheme as ParseMod
+<RequestMod>
+	<module>
+		<name>MONMODULE1</name>
+		<priority>xx</priority>
+		<file>XX.dll/XX.so</file>
+		<folder>PATHMODULE1</folder>
+	</module>
+	<module>
+		<name>MONMODULE2</name>
+		<priority>xx</priority>
+		<file>XX.dll/XX.so</file>
+		<folder>PATHMODULE2</folder>
+	</module>
+	<module>
+		<name>MONMODULE3</name>
+		<priority>xx</priority>
+		<file>XX.dll/XX.so</file>
+	</module>
+</RequestMod>
+
+<ResponseHeader>
+	<module>
+		<name>MONMODULE1</name>
+		<priority>xx</priority>
+		<file>XX.dll/XX.so</file>
+		<folder>PATHMODULE1</folder>
+	</module>
+	<module>
+		<name>MONMODULE3</name>
+		<priority>xx</priority>
+		<file>XX.dll/XX.so</file>
+	</module>
+</ResponseHeader>
+
+<ResponseHeaderMod>
+</ResponseHeaderMod>
+
+...
